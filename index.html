@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AssiaShop</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="bg-white shadow-md">
+        <div class="container mx-auto px-6 py-3">
+            <div class="flex justify-between items-center">
+                <div class="text-2xl font-bold text-gray-800">
+                    <a href="#" class="text-pink-500">AssiaShop</a>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#home" class="text-gray-600 hover:text-pink-500">Home</a>
+                    <a href="#categories" class="text-gray-600 hover:text-pink-500">Shop</a>
+                    <a href="#" class="text-gray-600 hover:text-pink-500">About</a>
+                    <a href="#contact" class="text-gray-600 hover:text-pink-500">Contact</a>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="relative">
+                        <input type="text" class="h-10 w-full rounded-full pl-10 pr-4 border border-gray-300 focus:outline-none focus:border-pink-500" placeholder="Search...">
+                        <div class="absolute left-0 top-0 flex items-center h-full pl-3">
+                            <i class="fas fa-search text-gray-500"></i>
+                        </div>
+                    </div>
+                    <a href="#" class="text-gray-600 hover:text-pink-500 relative">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="absolute top-0 right-0 inline-block w-2 h-2 bg-pink-500 rounded-full"></span>
+                    </a>
+                    <a href="#" class="text-gray-600 hover:text-pink-500">
+                        <i class="fas fa-user"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="md:hidden flex items-center">
+                <button class="text-gray-600 focus:outline-none focus:text-gray-500">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+        <div class="md:hidden">
+            <a href="#home" class="block text-gray-600 hover:text-pink-500 py-2">Home</a>
+            <a href="#categories" class="block text-gray-600 hover:text-pink-500 py-2">Shop</a>
+            <a href="#" class="block text-gray-600 hover:text-pink-500 py-2">About</a>
+            <a href="#contact" class="block text-gray-600 hover:text-pink-500 py-2">Contact</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="bg-cover bg-center h-screen" style="background-image: url('Coming\ soon.\ \(1\).png');">
+        <div class="container mx-auto h-full flex items-center justify-center">
+            <div class="text-center text-white">
+                <h1 class="text-4xl md:text-6xl font-bold mb-6">Welcome to AssiaShop</h1>
+                <p class="text-lg md:text-2xl mb-8">Discover the best deals on your favorite products</p>
+                <a href="#categories" class="bg-pink-500 text-white px-6 py-3 rounded-full text-lg font-semibold hover:bg-pink-700 transition duration-300">Shop Now</a>
+            </div>
+        </div>
+    </section>
+
+   <!-- Categories Section -->
+<section id="categories" class="py-12">
+    <div class="container mx-auto">
+        <h2 class="text-3xl font-bold text-center mb-8">Shop by Category</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Skin Care Category Card -->
+            <div class="bg-white shadow-md rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                <img src="pexels-shiny-diamond-3762879.jpg" alt="Skin Care" class="w-full h-64 object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-bold mb-2">Skin Care</h3>
+                    <p class="text-gray-600 mb-4">Discover our range of skin care products.</p>
+                    <a href="skin-care.html" class="bg-pink-500 text-white px-4 py-2 rounded-full hover:bg-pink-700 transition duration-300">Shop Now</a>
+                </div>
+            </div>
+            <!-- Hair Care Category Card -->
+            <div class="bg-white shadow-md rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                <img src="pexels-element5-973401.jpg" alt="Hair Care" class="w-full h-64 object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-bold mb-2">Hair Care</h3>
+                    <p class="text-gray-600 mb-4">Explore our hair care products for all hair types.</p>
+                    <a href="hair-care.html" class="bg-pink-500 text-white px-4 py-2 rounded-full hover:bg-pink-700 transition duration-300">Shop Now</a>
+                </div>
+            </div>
+            <!-- Perfumes Category Card -->
+            <div class="bg-white shadow-md rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                <img src="pexels-didsss-1190829.jpg" alt="Perfumes" class="w-full h-64 object-cover">
+                <div class="p-4">
+                    <h3 class="text-xl font-bold mb-2">Perfumes</h3>
+                    <p class="text-gray-600 mb-4">Find your signature scent from our collection of perfumes.</p>
+                    <a href="perfumes.html" class="bg-pink-500 text-white px-4 py-2 rounded-full hover:bg-pink-700 transition duration-300">Shop Now</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Promotional Banner Section -->
+    <section id="contact" class="bg-pink-500 text-white py-12">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-4">Special Offer!</h2>
+            <p class="text-lg mb-8">Get 20% off your first purchase. Use code: WELCOME20</p>
+            <a href="#" class="bg-white text-pink-500 px-6 py-3 rounded-full text-lg font-semibold hover:bg-gray-200 transition duration-300">Shop Now</a>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

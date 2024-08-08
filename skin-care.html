@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skin Care Products</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-100">
+
+    <!-- Products Section -->
+    <section id="products" class="py-12">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-8">Skin Care Products</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product Card 1 -->
+                <div class="bg-white shadow-md rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src="Missha Time Revolution Night Repair Probio Ampoule.jpg" alt="Product 1" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-2">Hydrating Serum</h3>
+                        <p class="text-gray-600 mb-4">Keep your skin moisturized with our hydrating serum.</p>
+                        <div class="text-pink-500 font-bold mb-4">5500 DZD</div>
+                        <button class="bg-pink-500 text-white px-4 py-2 rounded-full hover:bg-pink-700 transition duration-300" onclick="openBuyModal('Hydrating Serum', '2500 DZD')">Buy Now</button>
+                    </div>
+                </div>
+                <!-- Product Card 2 -->
+                <div class="bg-white shadow-md rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src="Anti-Aging Cream.jpg" alt="Product 2" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-2">Anti-Aging Cream</h3>
+                        <p class="text-gray-600 mb-4">Reduce wrinkles and fine lines with our anti-aging cream.</p>
+                        <div class="text-pink-500 font-bold mb-4">3800 DZD</div>
+                        <button class="bg-pink-500 text-white px-4 py-2 rounded-full hover:bg-pink-700 transition duration-300" onclick="openBuyModal('Anti-Aging Cream', '3000 DZD')">Buy Now</button>
+                    </div>
+                </div>
+                <!-- Product Card 3 -->
+                <div class="bg-white shadow-md rounded-lg overflow-hidden transform hover:scale-105 transition duration-300">
+                    <img src="Sulwhasoo Clarifying Mask.jpg" alt="Product 3" class="w-full h-64 object-cover">
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold mb-2">Brightening Face Mask</h3>
+                        <p class="text-gray-600 mb-4">Brighten your skin with our natural face mask.</p>
+                        <div class="text-pink-500 font-bold mb-4">3500 DZD</div>
+                        <button class="bg-pink-500 text-white px-4 py-2 rounded-full hover:bg-pink-700 transition duration-300" onclick="openBuyModal('Brightening Face Mask', '1500 DZD')">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Buy Modal -->
+    <div id="buyModal" class="fixed inset-0 bg-gray-800 bg-opacity-75 flex items-center justify-center hidden">
+        <div class="bg-white p-8 rounded-lg shadow-lg max-w-lg w-full">
+            <h2 id="productTitle" class="text-2xl font-bold mb-4">Product Name</h2>
+            <p id="productPrice" class="text-pink-500 font-bold mb-4">Price</p>
+            <form id="buyForm" action="submit_order.html" method="POST">
+                <div class="mb-4">
+                    <label for="quantity" class="block text-gray-700 font-bold mb-2">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" class="w-full p-2 border border-gray-300 rounded-lg" min="1" required>
+                </div>
+                <div class="mb-4">
+                    <label for="name" class="block text-gray-700 font-bold mb-2">Full Name:</label>
+                    <input type="text" id="name" name="name" class="w-full p-2 border border-gray-300 rounded-lg" required>
+                </div>
+                <div class="mb-4">
+                    <label for="address" class="block text-gray-700 font-bold mb-2">Address:</label>
+                    <input type="text" id="address" name="address" class="w-full p-2 border border-gray-300 rounded-lg" required>
+                </div>
+                <div class="mb-4">
+                    <label for="phone" class="block text-gray-700 font-bold mb-2">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" class="w-full p-2 border border-gray-300 rounded-lg" required>
+                </div>
+                <button type="submit" class="bg-pink-500 text-white px-4 py-2 rounded-full hover:bg-pink-700 transition duration-300 w-full">Place Order</button>
+            </form>
+            <button onclick="closeBuyModal()" class="text-gray-500 mt-4">Cancel</button>
+        </div>
+    </div>
+
+    <script>
+        function openBuyModal(productName, productPrice) {
+            document.getElementById('productTitle').innerText = productName;
+            document.getElementById('productPrice').innerText = productPrice;
+            document.getElementById('buyModal').classList.remove('hidden');
+        }
+
+        function closeBuyModal() {
+            document.getElementById('buyModal').classList.add('hidden');
+        }
+    </script>
+
+</body>
+</html>
